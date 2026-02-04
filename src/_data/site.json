@@ -1,0 +1,15 @@
+{
+  "name": "AI Workflows Library",
+  "defaultLang": "en",
+  "url": "https://YOUR-SITE.pages.dev",
+  "languages": [
+    {
+      "code": "en",
+      "label": "EN"
+    },
+    {
+      "code": "ru",
+      "label": "RU"
+    }
+  ]
+}

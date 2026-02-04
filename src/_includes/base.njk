@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title }} · {{ site.name }}</title>
+  {% if description %}<meta name="description" content="{{ description | escape }}" />{% endif %}
+  <link rel="canonical" href="{{ page.url | absUrl(site.url) }}" />
+
+  {# hreflang alternates (EN/RU) #}
+  {% if translationKey and collections.byTranslationKey %}
+    {% set items = collections.byTranslationKey.get(translationKey) %}
+    {% if items %}
+      {% for it in items %}
+        <link rel="alternate" hreflang="{{ it.data.lang }}" href="{{ it.url | absUrl(site.url) }}" />
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/{{ lang }}/">{{ site.name }}</a>
+      <span class="muted">·</span>
+      <span class="muted">{{ siteTagline }}</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/{{ lang }}/use-cases/">{{ navUseCases }}</a>
+        <a href="/{{ lang }}/tools/">{{ navTools }}</a>
+        <a href="/{{ lang }}/templates/">{{ navTemplates }}</a>
+      </nav>
+
+      <div class="lang">
+        {% if translationKey and collections.byTranslationKey %}
+          {% set items = collections.byTranslationKey.get(translationKey) %}
+          {% if items %}
+            {% for it in items %}
+              <a href="{{ it.url }}" class="{% if it.data.lang == lang %}active{% endif %}">{{ it.data.lang | upper }}</a>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  {{ content | safe }}
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div>{{ footerLine1 }}</div>
+    <div style="margin-top:6px; font-size: 13px;">
+      {{ footerLine2 }}
+    </div>
+  </div>
+</footer>
+</body>
+</html>
