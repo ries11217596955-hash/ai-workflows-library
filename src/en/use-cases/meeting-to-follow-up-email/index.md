@@ -1,4 +1,4 @@
----
+﻿---
 title: Meeting → Follow-up Email
 ---
 Turn raw notes (or a transcript) into a clean follow-up email plus a stable action list.

@@ -1,52 +1,132 @@
 ---
-title: AI Writing
+layout: base.njk
+title: "AI for writing"
+description: "Patterns and prompts for drafting, rewriting, and editing."
+lang: en
+translationKey: pillar-ai-writing
 ---
 
-A pillar for producing clear, consistent writing with AI — from briefs to publish-ready drafts.
+# AI for writing
 
-## Scope
-This pillar covers: briefs, outlines, drafts, rewrites, tone alignment, and structured documents.
-It does not cover: deep domain research without sources, or legal/medical advice.
+This page is a hub: practical patterns + copy-paste prompts.
 
-## Principles
-- **Contract first**: define format, audience, constraints, and “done”.
-- **Structure beats style**: outline before drafting.
-- **Assumptions are labeled**: don’t hide missing info.
-- **One section = one purpose**: avoid mixed intent.
-- **Consistency matters**: terminology, tense, voice, formatting.
-- **Edit in passes**: content → structure → language → polish.
+## What you will get
+- A simple workflow for drafting and editing.
+- 7 reusable patterns you can apply to emails, docs, and posts.
+- Copy-paste prompts (minimal + pro).
 
-## Standard workflows
-### 1) Brief → Outline → Draft
-1. Brief: goal, audience, constraints, key points, examples.
-2. Outline: headings + bullet intent per section.
-3. Draft: fill sections, keep scope.
-4. QA: run the checklist, fix gaps.
+## The 5-step workflow (stable)
+1) Define **purpose** and **audience**.
+2) Provide **inputs** (facts, links, constraints).
+3) Ask for a **structure** first (outline).
+4) Generate the draft.
+5) Run a **quality pass** (see: [Quality checklist](/en/tools/quality-checklist/)).
 
-### 2) Rewrite / Improve clarity
-1. Keep meaning (no semantic drift).
-2. Simplify structure (shorter sentences, cleaner paragraphs).
-3. Normalize terminology and tone.
-4. Final QA.
+## Core patterns
 
-## Prompt patterns
-### A) Contract prompt (base)
-- Goal:
-- Audience:
-- Format:
-- Constraints:
-- Inputs (paste):
-- Output requirements (must include):
+### 1) Outline first (then write)
+**Prompt**
+```text
+Create an outline for: <topic>.
+Audience: <who>.
+Goal: <what outcome>.
+Constraints: <length, tone, must-include points>.
+Output: a numbered outline (H2/H3).
+```
 
-### B) Outline-first prompt
-“Create an outline first. Wait for approval. Then write the draft using the approved outline.”
+### 2) Rewrite with constraints
+**Prompt**
+```text
+Rewrite the text below.
+Keep meaning. Improve clarity.
+Constraints: <tone, length, level>.
+Keep terms unchanged: <term list>.
+Text:
+<PASTE>
+```
 
-### C) QA prompt
-“Check this output using the Quality Checklist. Report issues in bullets, then provide a corrected version.”
+### 3) Edit for correctness (fact guard)
+**Prompt**
+```text
+Review the text for possible factual errors or ambiguous claims.
+Mark:
+- [CHECK] needs verification
+- [OK] likely correct
+Then propose safer rewrites that avoid unverified claims.
+Text:
+<PASTE>
+```
 
-## Quality gate
-Use: **[Quality Checklist](/en/tools/quality-checklist/)**
+### 4) Style transfer (without changing meaning)
+**Prompt**
+```text
+Rewrite in the style: <formal / friendly / direct / technical>.
+Do not change meaning or add new facts.
+Text:
+<PASTE>
+```
 
-## Related
-- Use cases index: `/en/use-cases/`
-- Pillars index: `/en/pillars/`
+### 5) Summarize for decision
+**Prompt**
+```text
+Summarize this content for a decision maker.
+Output:
+1) 5 bullet summary
+2) Risks / unknowns
+3) Recommended next step (1)
+Text:
+<PASTE>
+```
+
+### 6) Turn notes into a structured doc
+**Prompt**
+```text
+Turn these notes into a structured document.
+Format:
+- Title
+- Context
+- Key points
+- Open questions
+- Action list (Owner / Due / Status)
+Notes:
+<PASTE>
+```
+
+### 7) Generate alternatives (A/B/C)
+**Prompt**
+```text
+Create 3 variants of the same message:
+A) short and direct
+B) neutral and formal
+C) friendly and persuasive
+Constraints: <max length, must include X>.
+Draft idea:
+<PASTE>
+```
+
+## Starter packs (copy-paste)
+
+### Minimal request
+```text
+Task: <one sentence>.
+Audience: <who>.
+Constraints: <tone/length/must-include>.
+Output format: <bullets / table / sections>.
+```
+
+### Pro request (better control)
+```text
+Task: <task>.
+Context: <background>.
+Inputs: <facts/data you provide>.
+Constraints: <privacy, compliance, tone, length>.
+Output:
+1) Draft
+2) Assumptions (if any)
+3) Quality checks performed
+```
+
+## Related use cases
+- [Meeting → Follow-up Email](/en/use-cases/meeting-to-follow-up-email/)
+- [Meeting → Action Plan](/en/use-cases/meeting-to-action-plan/)
+- [Email assistant](/en/use-cases/email/)

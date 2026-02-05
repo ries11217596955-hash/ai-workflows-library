@@ -1,40 +1,99 @@
 ---
-title: AI Office
+layout: base.njk
+title: "AI for office work"
+description: "Email, documents, tables, and routine office workflows with AI."
+lang: en
+translationKey: pillar-ai-office
 ---
 
-A pillar for office-grade AI outputs: documents, tables, slides, and email — with a release mindset.
+# AI for office work
 
-## Scope
-Covers: Word-like docs, spreadsheets, slide decks, meeting notes, action plans, and operational templates.
-Does not cover: client confidential processing without controls, or “automation that runs itself” without review.
+A hub page for routine office workflows: email, docs, tables, and action tracking.
 
-## Typical outputs
-- Meeting notes → action plan
-- Checklists and SOP drafts
-- Tables: trackers, logs, registries
-- Slides: one-pagers, status, pitch outlines
-- Emails: follow-ups, summaries, requests
+## The office loop (repeatable)
+1) Capture input (notes / email / file).
+2) Normalize (clean text + extract facts).
+3) Produce an output (email / memo / table).
+4) Validate (quality checklist).
+5) Store or send.
 
-## Artefact standards (minimum)
-- **Clear title + purpose** in the first screen.
-- **Stable structure** (headings, consistent list style).
-- **Naming**: predictable paths and slugs (no spaces if your repo convention forbids them).
-- **Version/Status**: MVP / v0.x when applicable.
-- **No sensitive data** in public assets.
+## High-value workflows
 
-## Risk & compliance
-- Remove personal data and confidential details before publishing.
-- If a template includes placeholders, keep them clearly generic.
-- Avoid “invented facts” — cite or label assumptions.
+### 1) Email triage → replies
+Use case: [Email assistant](/en/use-cases/email/)
 
-## Tooling map
-- Writing & docs → see **AI Writing**
-- Quality gate → **Quality Checklist**
-- Use cases → `/en/use-cases/`
+**Prompt**
+```text
+You are my email assistant.
+Goal: draft a reply.
+Constraints: <tone, max length, must include points>.
+Input email:
+<PASTE>
+Output: 2 reply variants + subject line.
+```
 
-## Quality gate
-Use: **[Quality Checklist](/en/tools/quality-checklist/)**
+### 2) Notes → action plan (table)
+Use case: [Meeting → Action Plan](/en/use-cases/meeting-to-action-plan/)
 
-## Related
-- Pillars index: `/en/pillars/`
-- Tools index: `/en/tools/`
+**Prompt**
+```text
+Turn these notes into an action plan table.
+Columns: Action | Owner | Due | Status | Notes
+Notes:
+<PASTE>
+```
+
+### 3) Document cleanup (format + structure)
+**Prompt**
+```text
+Clean and restructure this document.
+Rules:
+- keep meaning
+- remove repetition
+- add headings where needed
+Output: Markdown with headings + short summary.
+Text:
+<PASTE>
+```
+
+### 4) Table cleanup (data hygiene)
+**Prompt**
+```text
+Clean this table data.
+Do:
+- normalize dates
+- unify naming
+- detect duplicates
+Output:
+1) cleaned table (same columns)
+2) list of issues found
+Table:
+<PASTE>
+```
+
+## Quick templates
+
+### Office memo
+```text
+Write an office memo.
+Topic: <topic>.
+Audience: <who>.
+Sections: Context / Decision / Actions / Risks.
+Keep it under <N> words.
+```
+
+### Meeting summary
+```text
+Summarize the meeting.
+Output:
+1) Summary (5 bullets)
+2) Decisions
+3) Action items (table)
+Notes:
+<PASTE>
+```
+
+## Guardrails
+- Never invent dates, names, or numbers.
+- If something is unknown, label it as [CHECK].
+- Run [Quality checklist](/en/tools/quality-checklist/) before sending.

@@ -14,7 +14,7 @@ footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
 
 # AI Workflows Library
 
-A practical library of ready-to-use AI workflows: prompts, checklists, and templates for everyday work **use cases → prompts → quality check**.
+A small, practical knowledge base: **use cases → prompts → quality check**.
 
 <div class="grid">
   <div class="card">
