@@ -1,47 +1,51 @@
 ---
 layout: base.njk
-title: "One text → 10 social posts"
-description: "Repurpose one long text into 10 short posts with hooks, structure, and calls to action."
+title: "Meeting notes → Action plan"
+description: "Turn messy meeting notes into a clear action plan with owners, deadlines, and next steps."
 lang: en
-translationKey: usecase-long-text-to-10-posts
+translationKey: usecase-meeting-to-action-plan
 navUseCases: "Use cases"
 navTools: "Tools"
 navTemplates: "Templates"
 ---
 
-# One text → 10 social posts
+# Meeting notes → Action plan
 
-Goal: turn one long piece into a **consistent 10-post pack** (same ideas, different angles).
+Goal: turn meeting notes (or a transcript) into a **clean action plan**: decisions, tasks, owners, deadlines, and risks.
 
-## Inputs (copy & fill)
-- Source text (paste):
-- Target platform (X/LinkedIn/Instagram/Telegram):
-- Audience (who exactly):
-- Tone (calm/strong/friendly/professional):
-- CTA (what you want people to do):
-- Constraints (no claims, no prices, no medical/legal advice, etc.):
+## Input (copy & fill)
+- Meeting topic:
+- Date/time:
+- Participants (names/roles):
+- Notes or transcript (paste below):
+- Constraints: (deadline, budget, tools, “must/never”, etc.)
+- Output style: (strict / friendly / executive)
+- Deadline timezone: (e.g., UTC+4)
 
 ## Prompt (paste into AI)
-**Role:** You are a social content editor.  
-**Task:** Create 10 posts based strictly on the source text. Do not add new facts. If a claim is not supported by the source, remove it or mark as “needs verification”.
+Role: you are an operations manager.  
+Task: convert the notes into an action plan. Do **not** invent facts. If something is unclear, add it as a question in the “Open questions” section.
 
-**Output format (repeat 10 times):**
-- Post #:
-- Hook (1 line)
-- Body (3–7 lines)
-- CTA (1 line)
-- Optional hashtags (0–5)
-- “Why this post works” (1 line)
+Output format (in this exact order):
 
-**Variation rules:**
-- Posts must differ: tip, story, checklist, myth vs fact, mistake, mini-framework, example, Q&A, summary, contrarian take.
-- Keep language simple. Avoid hype.
+1) **Summary (5 bullets max)**
+2) **Decisions made**
+   - Decision → rationale (if stated) → impact
+3) **Action plan table**
+   - Task | Owner | Due date | Priority (H/M/L) | Dependencies | Evidence/Link (if any)
+4) **Risks & blockers**
+   - Risk/blocker → why it matters → mitigation → owner
+5) **Open questions (must be answered)**
+6) **Next meeting agenda (10–20 min)**
+7) **Follow-up message draft** (short email/Slack message with tasks & deadlines)
 
-**Inputs:**  
-[PASTE HERE]
+Notes to follow:
+- If due dates are not stated, write “TBD” and list it again in Open questions.
+- If owners are not stated, write “Unassigned” and propose a role, not a person.
 
-## Quality check (quick)
-- No new facts beyond the source.
-- Each post is readable in <20 seconds.
-- CTA matches the goal (subscribe/save/comment/download).
-- Tone consistent across all 10.
+## Quality check (fast)
+- Are all tasks actionable (verb + object)?
+- Is every task assigned to an owner (or “Unassigned”)?
+- Are deadlines present (or clearly marked TBD)?
+- Do risks have a mitigation and an owner?
+- No invented facts?
