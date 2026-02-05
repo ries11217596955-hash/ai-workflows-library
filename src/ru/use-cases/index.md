@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: "Задачи"
-description: "Одна задача → один результат (промпты + проверка)."
+description: "Одна задача → один результат (промпт + проверка качества)."
 lang: ru
 translationKey: section-use-cases
 siteTagline: "Практичные сценарии и шаблоны работы с ИИ"
@@ -14,11 +14,12 @@ footerLine2: "Партнёрские ссылки (если будут) буду
 
 # Задачи
 
-Выбери конкретную задачу и копируй готовый промпт.
+Выбери конкретную задачу и скопируй готовый промпт.
 
 - [Резюме под вакансию](/ru/use-cases/resume/)
 - [Деловое письмо](/ru/use-cases/email/)
-- [Заметки → план](/ru/use-cases/plan/)
+- [Встреча → план действий](/ru/use-cases/meeting-to-action-plan/)
+- [Заметки → план (коротко)](/ru/use-cases/plan/)
 - [Таблица сравнения](/ru/use-cases/compare-table/)
-- [SOP / политика / регламент](/ru/use-cases/sop-policy/)
-- [Структура презентации](/ru/use-cases/slide-deck/)
+- [SOP / политика](/ru/use-cases/sop-policy/)
+- [План презентации](/ru/use-cases/slide-deck/)
