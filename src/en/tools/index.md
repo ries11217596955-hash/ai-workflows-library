@@ -18,3 +18,4 @@ Pages that are hard to replace with a single summary.
 
 - [Quality checklist](/en/tools/quality-checklist/)
 - [Tool selector matrix](/en/tools/tool-selector-matrix/)
+- [Quality Checklist](/en/tools/quality-checklist/) — Release-style validation checklist for any output.
