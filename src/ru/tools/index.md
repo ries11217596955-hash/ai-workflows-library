@@ -18,3 +18,4 @@ footerLine2: "Партнёрские ссылки (если будут) буду
 
 - [Чек‑лист качества](/ru/tools/quality-checklist/)
 - [Матрица выбора инструмента](/ru/tools/tool-selector-matrix/)
+- [Чек-лист качества](/ru/tools/quality-checklist/) — Проверка результата перед выпуском/публикацией.
