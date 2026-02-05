@@ -1,44 +1,57 @@
 ---
-layout: base.njk
-title: "Quality checklist (anti-hallucination)"
-description: "A fast checklist to catch bad AI outputs."
-lang: en
-translationKey: tool-quality-checklist
-siteTagline: "Practical AI use cases & templates"
-navUseCases: "Use cases"
-navTools: "Tools"
-navTemplates: "Templates"
-footerLine1: "This site provides workflow examples and templates. Always verify outputs before using them."
-footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
+---
+title: Quality Checklist
 ---
 
-# Quality checklist (anti‑hallucination)
+A lightweight, repeatable checklist to validate any AI workflow output (text, plan, document, script, dataset) before you ship it.
 
-Use this before you copy any AI output into “real life”.
+## When to use
+Use this before publishing, sending to a client/team, or saving as a “template / reusable asset”.
 
-## 10 checks
-1) **Facts:** any numbers, dates, names — are they real?  
-2) **Assumptions:** are assumptions explicit?  
-3) **Scope:** does it answer the question you asked (not another one)?  
-4) **Missing pieces:** what info was required but absent?  
-5) **Contradictions:** do parts conflict with each other?  
-6) **Actionability:** can someone execute it step by step?  
-7) **Tone:** matches the audience (neutral/friendly/strict)?  
-8) **Risk:** any legal/medical/financial claims → remove or cite sources.  
-9) **Safety:** no harmful instructions.  
-10) **Next step:** one clear next action.
+## Quality gates
+### A) Input clarity
+- [ ] Goal is explicit (what “good” looks like).
+- [ ] Audience and context are clear.
+- [ ] Constraints are stated (format, length, tone, scope).
+- [ ] Required sources/data are provided (or explicitly “none”).
 
-## Copy‑paste “QA pass” prompt
-```text
-Quality audit this text.
-Mark issues under: Facts, Assumptions, Missing, Contradictions, Risk.
-If a fact is uncertain, label it UNKNOWN.
-Then propose a corrected version.
-Text:
-<<<TEXT>>>
-```
+### B) Output contract
+- [ ] Output matches the requested format (headings, list types, file naming).
+- [ ] All requested parts are present (no missing sections).
+- [ ] Scope is respected (no extra unrelated content).
+- [ ] Assumptions are explicitly marked (if any).
 
-## Next
-- [Tool selector matrix](/en/tools/tool-selector-matrix/)
-- [AI for office work](/en/pillars/ai-office/)
+### C) Structure & consistency
+- [ ] One idea per section; no duplicates.
+- [ ] Terminology is consistent (same term = same meaning).
+- [ ] Numbering is stable (no accidental auto-number drift).
+- [ ] Tables/lists are readable and aligned with intent.
 
+### D) Factuality & sources (if facts are present)
+- [ ] Facts are either common knowledge or supported by citations/links.
+- [ ] Dates, numbers, names are verified against sources.
+- [ ] No overconfident claims when data is missing.
+
+### E) Safety & compliance
+- [ ] No sensitive personal data (PII) is included.
+- [ ] No confidential client/internal info is revealed.
+- [ ] No instructions that enable harm or policy violations.
+
+### F) Release readiness (for reusable assets)
+- [ ] Title and short description are present.
+- [ ] Version/Status is stated (e.g., MVP / v0.1).
+- [ ] Cross-links work (Tools ↔ Pillars ↔ Use cases).
+- [ ] EN/RU parity exists (for MVP scope pages).
+
+## Common failure modes
+- Missing a requested section or quietly changing the format.
+- Mixing “assumptions” as if they were facts.
+- Link rot: relative links break after route changes.
+- Parity drift: EN page updated but RU mirror left behind.
+- Overloading the page with “how-to” instead of a clear contract.
+
+## Definition of Done
+- All **A–C** checks are ✅.
+- If facts exist, **D** is ✅.
+- If public-facing, **E** is ✅.
+- If it’s a reusable page/template, **F** is ✅.
