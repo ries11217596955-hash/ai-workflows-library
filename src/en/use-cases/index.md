@@ -14,11 +14,13 @@ footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
 
 # Use cases
 
-Pick a concrete task and copy‑paste a ready prompt.
+Pick a concrete task and copy-paste a ready prompt.
 
 - [Tailor a resume](/en/use-cases/resume/)
-- [Business email](/en/use-cases/email/)
-- [Turn notes into a plan](/en/use-cases/plan/)
+- [Write a business email](/en/use-cases/email/)
+- [Meeting notes → Action plan](/en/use-cases/meeting-to-action-plan/)
+- [Turn notes into a plan (quick)](/en/use-cases/plan/)
 - [Build a comparison table](/en/use-cases/compare-table/)
 - [Draft a SOP / policy](/en/use-cases/sop-policy/)
 - [Create a slide deck outline](/en/use-cases/slide-deck/)
+
