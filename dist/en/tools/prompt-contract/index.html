@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prompt contract · AI Workflows Library</title>
+  <meta name="description" content="A compact request contract for consistent AI outputs." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/tools/prompt-contract/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/tools/prompt-contract/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/tools/prompt-contract/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/"></a>
+        <a href="/en/tools/"></a>
+        <a href="/en/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/tools/prompt-contract/" class="active">EN</a>
+            
+              <a href="/ru/tools/prompt-contract/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Prompt contract</h1>
+<p>A “contract” is a stable structure for requests. It reduces drift and improves repeatability.</p>
+<h2>The contract (copy-paste)</h2>
+<pre><code class="language-text">Task: &lt;what you want&gt;.
+Context: &lt;why / background&gt;.
+Inputs: &lt;facts you provide&gt;.
+Constraints: &lt;privacy, tone, length, must-include&gt;.
+Output format: &lt;sections/table/list&gt;.
+Quality rules:
+- do not invent facts
+- label unknowns as [CHECK]
+- keep key terms unchanged: &lt;terms&gt;
+</code></pre>
+<h2>Minimal vs Pro</h2>
+<h3>Minimal (fast)</h3>
+<pre><code class="language-text">Task: &lt;one sentence&gt;.
+Constraints: &lt;tone/length&gt;.
+Output: &lt;bullets or table&gt;.
+</code></pre>
+<h3>Pro (controlled)</h3>
+<pre><code class="language-text">Task:
+Context:
+Inputs:
+Constraints:
+Output:
+1) Draft
+2) Assumptions (if any)
+3) QA pass (issues + fixes)
+</code></pre>
+<h2>Common failures (and fixes)</h2>
+<ul>
+<li>Vague task → add “Output format”.</li>
+<li>Invented facts → add “do not invent facts”.</li>
+<li>Too long → add max length.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

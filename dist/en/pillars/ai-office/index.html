@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI for office work · AI Workflows Library</title>
+  <meta name="description" content="Email, documents, tables, and routine office workflows with AI." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/pillars/ai-office/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/pillars/ai-office/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-office/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/"></a>
+        <a href="/en/tools/"></a>
+        <a href="/en/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/pillars/ai-office/" class="active">EN</a>
+            
+              <a href="/ru/pillars/ai-office/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>AI for office work</h1>
+<p>A hub page for routine office workflows: email, docs, tables, and action tracking.</p>
+<h2>The office loop (repeatable)</h2>
+<ol>
+<li>Capture input (notes / email / file).</li>
+<li>Normalize (clean text + extract facts).</li>
+<li>Produce an output (email / memo / table).</li>
+<li>Validate (quality checklist).</li>
+<li>Store or send.</li>
+</ol>
+<h2>High-value workflows</h2>
+<h3>1) Email triage → replies</h3>
+<p>Use case: <a href="/en/use-cases/email/">Email assistant</a></p>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">You are my email assistant.
+Goal: draft a reply.
+Constraints: &lt;tone, max length, must include points&gt;.
+Input email:
+&lt;PASTE&gt;
+Output: 2 reply variants + subject line.
+</code></pre>
+<h3>2) Notes → action plan (table)</h3>
+<p>Use case: <a href="/en/use-cases/meeting-to-action-plan/">Meeting → Action Plan</a></p>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Turn these notes into an action plan table.
+Columns: Action | Owner | Due | Status | Notes
+Notes:
+&lt;PASTE&gt;
+</code></pre>
+<h3>3) Document cleanup (format + structure)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Clean and restructure this document.
+Rules:
+- keep meaning
+- remove repetition
+- add headings where needed
+Output: Markdown with headings + short summary.
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h3>4) Table cleanup (data hygiene)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Clean this table data.
+Do:
+- normalize dates
+- unify naming
+- detect duplicates
+Output:
+1) cleaned table (same columns)
+2) list of issues found
+Table:
+&lt;PASTE&gt;
+</code></pre>
+<h2>Quick templates</h2>
+<h3>Office memo</h3>
+<pre><code class="language-text">Write an office memo.
+Topic: &lt;topic&gt;.
+Audience: &lt;who&gt;.
+Sections: Context / Decision / Actions / Risks.
+Keep it under &lt;N&gt; words.
+</code></pre>
+<h3>Meeting summary</h3>
+<pre><code class="language-text">Summarize the meeting.
+Output:
+1) Summary (5 bullets)
+2) Decisions
+3) Action items (table)
+Notes:
+&lt;PASTE&gt;
+</code></pre>
+<h2>Guardrails</h2>
+<ul>
+<li>Never invent dates, names, or numbers.</li>
+<li>If something is unknown, label it as [CHECK].</li>
+<li>Run <a href="/en/tools/quality-checklist/">Quality checklist</a> before sending.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

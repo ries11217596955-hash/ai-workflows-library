@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Build a comparison table · AI Workflows Library</title>
+  <meta name="description" content="Compare options with criteria and a recommendation." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/use-cases/compare-table/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/compare-table/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/compare-table/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted">Practical AI use cases &amp; templates</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/">Use cases</a>
+        <a href="/en/tools/">Tools</a>
+        <a href="/en/templates/">Templates</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/compare-table/" class="active">EN</a>
+            
+              <a href="/ru/use-cases/compare-table/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Build a comparison table</h1>
+<p><strong>Goal:</strong> Make a table that helps decide between options (tools, services, plans).</p>
+<h2>What you need (inputs)</h2>
+<ul>
+<li>Options list (3–10)</li>
+<li>Your criteria (5–12) or ask AI to propose</li>
+<li>Constraints (budget, must-have)</li>
+</ul>
+<h2>Copy‑paste prompt templates</h2>
+<p><strong>Prompt 1 — Table + scoring</strong></p>
+<pre><code class="language-text">Create a comparison table.
+Options:
+&lt;&lt;&lt;OPTIONS&gt;&gt;&gt;
+Criteria:
+&lt;&lt;&lt;CRITERIA&gt;&gt;&gt;
+Output:
+1) Table: Criteria x Options with short notes
+2) Scoring (0–5) per criterion
+3) Recommendation with reasons
+Constraints:
+&lt;&lt;&lt;CONSTRAINTS&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 2 — Criteria proposal</strong></p>
+<pre><code class="language-text">Propose 10 selection criteria for choosing among these options. Keep criteria measurable.
+Options:
+&lt;&lt;&lt;OPTIONS&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 3 — Decision memo</strong></p>
+<pre><code class="language-text">Write a 1-page decision memo: context, options, evaluation, decision, risks.
+Use this table:
+&lt;&lt;&lt;TABLE&gt;&gt;&gt;
+</code></pre>
+<h2>Quality check (30 seconds)</h2>
+<ul>
+<li>Criteria match your real constraints</li>
+<li>Notes are factual</li>
+<li>Recommendation explains tradeoffs</li>
+</ul>
+<h2>Common mistakes</h2>
+<ul>
+<li>Too many vague criteria</li>
+<li>No tradeoffs explained</li>
+<li>Scores without reasons</li>
+</ul>
+<h2>Next</h2>
+<ul>
+<li><a href="/en/tools/tool-selector-matrix/">Tool selector matrix</a></li>
+<li><a href="/en/pillars/ai-automation/">AI for automation</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div>This site provides workflow examples and templates. Always verify outputs before using them.</div>
+    <div style="margin-top:6px; font-size: 13px;">
+      Affiliate links (if any) will be disclosed on-page. © 2026
+    </div>
+  </div>
+</footer>
+</body>
+</html>

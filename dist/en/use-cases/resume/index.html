@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tailor a resume to a job · AI Workflows Library</title>
+  <meta name="description" content="Generate a tailored resume draft and a relevance checklist." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/use-cases/resume/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/resume/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/resume/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted">Practical AI use cases &amp; templates</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/">Use cases</a>
+        <a href="/en/tools/">Tools</a>
+        <a href="/en/templates/">Templates</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/resume/" class="active">EN</a>
+            
+              <a href="/ru/use-cases/resume/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Tailor a resume to a job</h1>
+<p><strong>Goal:</strong> Produce a targeted resume + bullet achievements aligned to a job description.</p>
+<h2>What you need (inputs)</h2>
+<ul>
+<li>Your current resume (text)</li>
+<li>Job description (text)</li>
+<li>2–3 measurable achievements (optional)</li>
+</ul>
+<h2>Copy‑paste prompt templates</h2>
+<p><strong>Prompt 1 — Resume rewrite</strong></p>
+<pre><code class="language-text">Rewrite my resume for this job. Preserve facts. Do not invent companies or dates.
+Output:
+1) Summary (3 lines)
+2) Skills (bullets)
+3) Experience bullets (STAR format)
+4) Keywords list used
+Input resume:
+&lt;&lt;&lt;RESUME&gt;&gt;&gt;
+Job description:
+&lt;&lt;&lt;JD&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 2 — Achievement bullets</strong></p>
+<pre><code class="language-text">From my experience section, rewrite bullets to be measurable and impact-focused. Keep facts.
+Output: 8–12 bullets.
+Experience:
+&lt;&lt;&lt;TEXT&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 3 — ATS check</strong></p>
+<pre><code class="language-text">Compare this resume against the job description.
+Output:
+- Missing keywords
+- Weak sections
+- 5 concrete improvements (no fluff)
+Resume:
+&lt;&lt;&lt;RESUME&gt;&gt;&gt;
+JD:
+&lt;&lt;&lt;JD&gt;&gt;&gt;
+</code></pre>
+<h2>Quality check (30 seconds)</h2>
+<ul>
+<li>No invented claims/dates</li>
+<li>Keywords match the JD without stuffing</li>
+<li>Bullets show impact (numbers if available)</li>
+<li>Length fits your seniority</li>
+</ul>
+<h2>Common mistakes</h2>
+<ul>
+<li>Letting AI invent tools/years</li>
+<li>Too generic summary</li>
+<li>Overstuffing keywords</li>
+<li>No proof of impact</li>
+</ul>
+<h2>Next</h2>
+<ul>
+<li><a href="/en/use-cases/email/">Business email</a></li>
+<li><a href="/en/tools/quality-checklist/">Quality checklist</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div>This site provides workflow examples and templates. Always verify outputs before using them.</div>
+    <div style="margin-top:6px; font-size: 13px;">
+      Affiliate links (if any) will be disclosed on-page. © 2026
+    </div>
+  </div>
+</footer>
+</body>
+</html>

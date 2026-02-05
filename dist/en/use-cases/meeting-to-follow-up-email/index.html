@@ -1,0 +1,60 @@
+<p>Turn raw notes (or a transcript) into a clean follow-up email plus a stable action list.</p>
+<h2>Inputs</h2>
+<ul>
+<li>Meeting notes or transcript</li>
+<li>Attendees (names + roles if useful)</li>
+<li>Decisions made</li>
+<li>Actions (owner, due date, dependencies)</li>
+</ul>
+<h2>Output (contract)</h2>
+<ol>
+<li>Email subject</li>
+<li>Email body (summary + decisions + action list)</li>
+<li>Action list in a small table (Owner / Action / Due / Notes)</li>
+</ol>
+<h2>Steps</h2>
+<ol>
+<li>Normalize notes: decisions vs actions vs open questions.</li>
+<li>Extract actions with owners and dates (missing → <strong>[ASSUMPTION]</strong>).</li>
+<li>Draft the email in a neutral tone.</li>
+<li>Run the <a href="/en/tools/quality-checklist/">Quality checklist</a>.</li>
+<li>Ship.</li>
+</ol>
+<h2>Prompt pack</h2>
+<p>Paste your notes below the prompt.
+<strong>PROMPT</strong>
+You are an operations assistant. Convert the meeting notes into:
+A) a follow-up email, and
+B) an action table.
+Rules:</p>
+<ul>
+<li>If a key field is missing (owner/date), label it <strong>[ASSUMPTION]</strong> and keep the item.</li>
+<li>Do not invent facts. Keep decisions separate from actions.</li>
+<li>Use this output format exactly:</li>
+</ul>
+<h3>Subject</h3>
+<p>...</p>
+<h3>Email</h3>
+<p>...</p>
+<h3>Action table</h3>
+<table>
+<thead>
+<tr>
+<th>Owner</th>
+<th>Action</th>
+<th>Due</th>
+<th>Notes</th>
+</tr>
+</thead>
+</table>
+<h3>Verified vs Assumed</h3>
+<ul>
+<li>Verified: ...</li>
+<li>Assumed: ...</li>
+</ul>
+<h2>Example notes</h2>
+<p>(Replace with your notes.)</p>
+<ul>
+<li>Decision: ...</li>
+<li>Action: ...</li>
+</ul>

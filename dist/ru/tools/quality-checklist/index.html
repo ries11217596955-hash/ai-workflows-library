@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Чек-лист качества · AI Workflows Library</title>
+  <meta name="description" content="Быстрая проверка ответа ИИ перед использованием." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/tools/quality-checklist/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/tools/quality-checklist/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/tools/quality-checklist/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/"></a>
+        <a href="/ru/tools/"></a>
+        <a href="/ru/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/tools/quality-checklist/" class="">EN</a>
+            
+              <a href="/ru/tools/quality-checklist/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Чек-лист качества</h1>
+<p>Этот чек-лист снижает риск ошибок и “уверенно неверных” ответов.</p>
+<h2>Проверка за 60 секунд</h2>
+<ol>
+<li><strong>Попадание в цель</strong>: это точно отвечает на задачу?</li>
+<li><strong>Без выдумок</strong>: даты/имена/цифры не придуманы.</li>
+<li><strong>Допущения помечены</strong>: неизвестное отмечено явно.</li>
+<li><strong>Формат соблюдён</strong>: таблица/разделы как просили.</li>
+<li><strong>Практичность</strong>: есть конкретный результат (если это требовалось).</li>
+</ol>
+<h2>Проверка за 5 минут (безопаснее)</h2>
+<h3>A) Фактическая корректность</h3>
+<ul>
+<li>Всё, что требует проверки, помечено <strong>[CHECK]</strong>.</li>
+<li>Нет “новых фактов”, которых не было во входных данных.</li>
+<li>Термины используются стабильно (без дрейфа смысла).</li>
+</ul>
+<h3>B) Полнота</h3>
+<ul>
+<li>Все ограничения соблюдены (объём, тон, обязательные пункты).</li>
+<li>Недостающие входные данные оформлены как вопросы/допущения.</li>
+</ul>
+<h3>C) Риски и приватность</h3>
+<ul>
+<li>Нет лишнего раскрытия чувствительной информации.</li>
+<li>Нет самоуверенных юридических/медицинских/финансовых утверждений.</li>
+</ul>
+<h3>D) Ясность</h3>
+<ul>
+<li>Короткие фразы, минимум жаргона.</li>
+<li>Заголовки соответствуют содержанию.</li>
+</ul>
+<h2>Промпт (QA-прогон)</h2>
+<pre><code class="language-text">Сделай проверку качества ответа ниже.
+Правила:
+- новые факты не добавлять
+- то, что требует проверки, помечать [CHECK]
+Выход:
+1) Список проблем (severity: High/Med/Low)
+2) Более безопасные формулировки
+3) Вопросы по недостающим данным
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h2>Когда лучше остановиться и переформулировать</h2>
+<ul>
+<li>Модель угадывает критичные детали.</li>
+<li>Ответ зависит от отсутствующих данных.</li>
+<li>Формат дважды получается неверным.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

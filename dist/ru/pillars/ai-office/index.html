@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ИИ для офисной работы · AI Workflows Library</title>
+  <meta name="description" content="Письма, документы, таблицы и рутинные офисные процессы с ИИ." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-office/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/pillars/ai-office/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-office/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/"></a>
+        <a href="/ru/tools/"></a>
+        <a href="/ru/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/pillars/ai-office/" class="">EN</a>
+            
+              <a href="/ru/pillars/ai-office/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>ИИ для офисной работы</h1>
+<p>Хаб для офисных задач: письма, документы, таблицы, контроль действий.</p>
+<h2>Офисный цикл (повторяемый)</h2>
+<ol>
+<li>Захватить вход (заметки / письмо / файл).</li>
+<li>Нормализовать (почистить текст + выделить факты).</li>
+<li>Сформировать результат (письмо / мемо / таблица).</li>
+<li>Проверить (чек-лист качества).</li>
+<li>Сохранить или отправить.</li>
+</ol>
+<h2>Самые полезные сценарии</h2>
+<h3>1) Разбор почты → ответы</h3>
+<p>Use case: <a href="/ru/use-cases/email/">Email-ассистент</a></p>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Ты мой email-ассистент.
+Цель: подготовить ответ.
+Ограничения: &lt;тон, объём, что обязательно включить&gt;.
+Входное письмо:
+&lt;ВСТАВЬ&gt;
+Выход: 2 варианта ответа + тема письма.
+</code></pre>
+<h3>2) Заметки → план действий (таблица)</h3>
+<p>Use case: <a href="/ru/use-cases/meeting-to-action-plan/">Встреча → план действий</a></p>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Преобразуй заметки в таблицу плана действий.
+Колонки: Действие | Ответственный | Срок | Статус | Примечания
+Заметки:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>3) Приведение документа (структура + формат)</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Приведи документ в порядок.
+Правила:
+- смысл сохранить
+- убрать повторы
+- добавить заголовки где нужно
+Выход: Markdown с заголовками + короткое резюме.
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>4) Очистка таблицы (гигиена данных)</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Очисти табличные данные.
+Сделай:
+- нормализация дат
+- унификация наименований
+- поиск дублей
+Выход:
+1) очищенная таблица (те же колонки)
+2) список найденных проблем
+Таблица:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h2>Быстрые шаблоны</h2>
+<h3>Служебная записка</h3>
+<pre><code class="language-text">Напиши служебную записку.
+Тема: &lt;тема&gt;.
+Аудитория: &lt;кто&gt;.
+Разделы: Контекст / Решение / Действия / Риски.
+Объём: до &lt;N&gt; слов.
+</code></pre>
+<h3>Итог встречи</h3>
+<pre><code class="language-text">Суммируй встречу.
+Выход:
+1) Резюме (5 буллетов)
+2) Решения
+3) Действия (таблица)
+Заметки:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h2>Гварды</h2>
+<ul>
+<li>Не придумывай даты, имена, цифры.</li>
+<li>Если неизвестно — пометь как [CHECK].</li>
+<li>Перед отправкой прогони <a href="/ru/tools/quality-checklist/">Чек-лист качества</a>.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

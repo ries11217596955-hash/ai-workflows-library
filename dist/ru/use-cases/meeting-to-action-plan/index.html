@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Встреча → план действий · AI Workflows Library</title>
+  <meta name="description" content="Преврати заметки со встречи в понятный план действий: задачи, владельцы, сроки, риски." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/use-cases/meeting-to-action-plan/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/meeting-to-action-plan/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/meeting-to-action-plan/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/">Задачи</a>
+        <a href="/ru/tools/">Инструменты</a>
+        <a href="/ru/templates/">Шаблоны</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/meeting-to-action-plan/" class="">EN</a>
+            
+              <a href="/ru/use-cases/meeting-to-action-plan/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Встреча → план действий</h1>
+<p>Цель: превратить заметки/стенограмму встречи в <strong>чёткий план действий</strong>: решения, задачи, ответственные, сроки и риски.</p>
+<h2>Входные данные (скопируй и заполни)</h2>
+<ul>
+<li>Тема встречи:</li>
+<li>Дата/время:</li>
+<li>Участники (имя/роль):</li>
+<li>Заметки или стенограмма (вставь ниже):</li>
+<li>Ограничения: (дедлайн, бюджет, инструменты, “нельзя/обязательно” и т.п.)</li>
+<li>Стиль результата: (строго / дружелюбно / для руководителя)</li>
+<li>Часовой пояс сроков: (например, UTC+4)</li>
+</ul>
+<h2>Промпт (вставь в ИИ)</h2>
+<p>Роль: ты — операционный менеджер.<br>
+Задача: преобразуй заметки во <strong>внятный план действий</strong>. Факты <strong>не выдумывать</strong>. Если чего-то не хватает — фиксируй как вопрос в разделе “Открытые вопросы”.</p>
+<p>Формат результата (строго в этом порядке):</p>
+<ol>
+<li><strong>Краткое резюме (до 5 буллетов)</strong></li>
+<li><strong>Принятые решения</strong>
+<ul>
+<li>Решение → обоснование (если было) → эффект</li>
+</ul>
+</li>
+<li><strong>Таблица плана действий</strong>
+<ul>
+<li>Задача | Владелец | Срок | Приоритет (H/M/L) | Зависимости | Ссылка/доказательство (если есть)</li>
+</ul>
+</li>
+<li><strong>Риски и блокеры</strong>
+<ul>
+<li>Риск/блокер → почему важно → мера → владелец</li>
+</ul>
+</li>
+<li><strong>Открытые вопросы (обязательны к уточнению)</strong></li>
+<li><strong>Повестка следующей встречи (10–20 минут)</strong></li>
+<li><strong>Черновик сообщения участникам</strong> (короткое письмо/Slack с задачами и сроками)</li>
+</ol>
+<p>Правила:</p>
+<ul>
+<li>Если сроки не указаны — ставь “TBD” и продублируй в “Открытые вопросы”.</li>
+<li>Если владелец не указан — ставь “Не назначен” и предложи роль (не человека).</li>
+</ul>
+<h2>Быстрая проверка качества</h2>
+<ul>
+<li>Каждая задача — действие (глагол + объект)?</li>
+<li>У каждой задачи есть владелец (или “Не назначен”)?</li>
+<li>Сроки есть (или честно TBD)?</li>
+<li>У рисков есть мера и владелец?</li>
+<li>Нет выдуманных фактов?</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

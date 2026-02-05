@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quality checklist · AI Workflows Library</title>
+  <meta name="description" content="A quick checklist to validate AI output before you use it." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/tools/quality-checklist/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/tools/quality-checklist/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/tools/quality-checklist/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/"></a>
+        <a href="/en/tools/"></a>
+        <a href="/en/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/tools/quality-checklist/" class="active">EN</a>
+            
+              <a href="/ru/tools/quality-checklist/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Quality checklist</h1>
+<p>Use this checklist to reduce mistakes and “confident wrong answers”.</p>
+<h2>60-second check (fast)</h2>
+<ol>
+<li><strong>Goal match</strong>: does it answer the task you asked?</li>
+<li><strong>No invention</strong>: dates/names/numbers are not invented.</li>
+<li><strong>Assumptions labeled</strong>: unknowns are marked clearly.</li>
+<li><strong>Format OK</strong>: requested structure (table/sections) is respected.</li>
+<li><strong>Actionability</strong>: next steps are concrete (if requested).</li>
+</ol>
+<h2>5-minute check (safer)</h2>
+<h3>A) Factual integrity</h3>
+<ul>
+<li>Any claims that need verification are labeled <strong>[CHECK]</strong>.</li>
+<li>No hidden “new facts” were introduced.</li>
+<li>Definitions match the context (no term drift).</li>
+</ul>
+<h3>B) Completeness</h3>
+<ul>
+<li>All constraints were respected (length, tone, required points).</li>
+<li>Missing inputs are listed as questions or assumptions.</li>
+</ul>
+<h3>C) Risk &amp; privacy</h3>
+<ul>
+<li>Sensitive information is not exposed.</li>
+<li>The output avoids overconfident legal/medical/financial claims.</li>
+</ul>
+<h3>D) Clarity</h3>
+<ul>
+<li>Short sentences, minimal jargon.</li>
+<li>Headings reflect content.</li>
+</ul>
+<h2>Copy-paste prompt (QA pass)</h2>
+<pre><code class="language-text">Run a quality pass on the output below.
+Rules:
+- do not add new facts
+- flag [CHECK] items that require verification
+Output:
+1) Issues list (severity: High/Med/Low)
+2) Proposed safe rewrites
+3) Questions for missing inputs
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h2>When to stop and re-ask</h2>
+<ul>
+<li>The model is guessing critical details.</li>
+<li>The answer depends on missing data.</li>
+<li>The format is wrong twice.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

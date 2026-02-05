@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Draft a SOP / policy · AI Workflows Library</title>
+  <meta name="description" content="Produce a simple SOP with steps, roles, and checks." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/use-cases/sop-policy/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/sop-policy/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/sop-policy/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted">Practical AI use cases &amp; templates</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/">Use cases</a>
+        <a href="/en/tools/">Tools</a>
+        <a href="/en/templates/">Templates</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/sop-policy/" class="active">EN</a>
+            
+              <a href="/ru/use-cases/sop-policy/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Draft a SOP / policy</h1>
+<p><strong>Goal:</strong> Write a practical SOP that people can follow.</p>
+<h2>What you need (inputs)</h2>
+<ul>
+<li>Process name</li>
+<li>Scope (what’s included/excluded)</li>
+<li>Roles involved</li>
+<li>Inputs/outputs</li>
+<li>Risks (optional)</li>
+</ul>
+<h2>Copy‑paste prompt templates</h2>
+<p><strong>Prompt 1 — SOP draft</strong></p>
+<pre><code class="language-text">Draft a SOP for this process: &lt;process&gt;.
+Include:
+- Purpose
+- Scope (in/out)
+- Definitions (if needed)
+- Roles &amp; responsibilities
+- Step-by-step procedure
+- Records/logs
+- Quality checks
+Constraints: simple, no legal claims.
+Inputs:
+&lt;&lt;&lt;INPUTS&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 2 — Checklist version</strong></p>
+<pre><code class="language-text">Convert this SOP into a checklist format for daily use.
+SOP:
+&lt;&lt;&lt;SOP&gt;&gt;&gt;
+</code></pre>
+<p><strong>Prompt 3 — Failure modes</strong></p>
+<pre><code class="language-text">List top 10 failure modes for this SOP and add prevention checks.
+SOP:
+&lt;&lt;&lt;SOP&gt;&gt;&gt;
+</code></pre>
+<h2>Quality check (30 seconds)</h2>
+<ul>
+<li>Scope is explicit</li>
+<li>Steps are executable</li>
+<li>Checks exist</li>
+<li>No unrealistic promises</li>
+</ul>
+<h2>Common mistakes</h2>
+<ul>
+<li>Too abstract</li>
+<li>No roles</li>
+<li>No records/logs section</li>
+</ul>
+<h2>Next</h2>
+<ul>
+<li><a href="/en/pillars/ai-automation/">AI for automation</a></li>
+<li><a href="/en/tools/quality-checklist/">Quality checklist</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div>This site provides workflow examples and templates. Always verify outputs before using them.</div>
+    <div style="margin-top:6px; font-size: 13px;">
+      Affiliate links (if any) will be disclosed on-page. © 2026
+    </div>
+  </div>
+</footer>
+</body>
+</html>

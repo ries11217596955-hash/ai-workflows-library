@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOP / политика / регламент · AI Workflows Library</title>
+  <meta name="description" content="Сделать простой регламент с шагами, ролями и проверками." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/use-cases/sop-policy/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/sop-policy/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/sop-policy/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted">Практичные сценарии и шаблоны работы с ИИ</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/">Задачи</a>
+        <a href="/ru/tools/">Инструменты</a>
+        <a href="/ru/templates/">Шаблоны</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/sop-policy/" class="">EN</a>
+            
+              <a href="/ru/use-cases/sop-policy/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>SOP / политика / регламент</h1>
+<p><strong>Цель:</strong> Написать практичный регламент, которому можно следовать.</p>
+<h2>Что нужно на вход (inputs)</h2>
+<ul>
+<li>Название процесса</li>
+<li>Границы (что входит/не входит)</li>
+<li>Роли</li>
+<li>Входы/выходы</li>
+<li>Риски (опционально)</li>
+</ul>
+<h2>Готовые промпты (копипаст)</h2>
+<p><strong>Промпт 1 — Черновик SOP</strong></p>
+<pre><code class="language-text">Сделай SOP/регламент для процесса: &lt;процесс&gt;.
+Включи:
+- Цель
+- Границы (входит/не входит)
+- Определения (если нужно)
+- Роли и ответственность
+- Пошаговая процедура
+- Записи/логи
+- Проверки качества
+Ограничения: просто, без юридических обещаний.
+Вход:
+&lt;&lt;&lt;INPUTS&gt;&gt;&gt;
+</code></pre>
+<p><strong>Промпт 2 — Версия чек‑листа</strong></p>
+<pre><code class="language-text">Преобразуй SOP в формат чек‑листа для ежедневного использования.
+SOP:
+&lt;&lt;&lt;SOP&gt;&gt;&gt;
+</code></pre>
+<p><strong>Промпт 3 — Failure modes</strong></p>
+<pre><code class="language-text">Перечисли 10 типовых сбоев этого SOP и добавь проверки предотвращения.
+SOP:
+&lt;&lt;&lt;SOP&gt;&gt;&gt;
+</code></pre>
+<h2>Проверка качества (30 секунд)</h2>
+<ul>
+<li>Границы процесса ясны</li>
+<li>Шаги исполнимы</li>
+<li>Есть проверки</li>
+<li>Нет нереалистичных обещаний</li>
+</ul>
+<h2>Типовые ошибки</h2>
+<ul>
+<li>Слишком абстрактно</li>
+<li>Нет ролей</li>
+<li>Нет раздела записей/логов</li>
+</ul>
+<h2>Дальше</h2>
+<ul>
+<li><a href="/ru/pillars/ai-automation/">ИИ для автоматизации</a></li>
+<li><a href="/ru/tools/quality-checklist/">Чек‑лист качества</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div>Здесь примеры процессов и шаблоны. Всегда проверяйте результат ИИ перед использованием.</div>
+    <div style="margin-top:6px; font-size: 13px;">
+      Партнёрские ссылки (если будут) будут помечены на странице. © 2026
+    </div>
+  </div>
+</footer>
+</body>
+</html>

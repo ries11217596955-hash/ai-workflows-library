@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meeting notes → Action plan · AI Workflows Library</title>
+  <meta name="description" content="Turn messy meeting notes into a clear action plan with owners, deadlines, and next steps." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/use-cases/meeting-to-action-plan/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/use-cases/meeting-to-action-plan/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/use-cases/meeting-to-action-plan/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/">Use cases</a>
+        <a href="/en/tools/">Tools</a>
+        <a href="/en/templates/">Templates</a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/use-cases/meeting-to-action-plan/" class="active">EN</a>
+            
+              <a href="/ru/use-cases/meeting-to-action-plan/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Meeting notes → Action plan</h1>
+<p>Goal: turn meeting notes (or a transcript) into a <strong>clean action plan</strong>: decisions, tasks, owners, deadlines, and risks.</p>
+<h2>Input (copy &amp; fill)</h2>
+<ul>
+<li>Meeting topic:</li>
+<li>Date/time:</li>
+<li>Participants (names/roles):</li>
+<li>Notes or transcript (paste below):</li>
+<li>Constraints: (deadline, budget, tools, “must/never”, etc.)</li>
+<li>Output style: (strict / friendly / executive)</li>
+<li>Deadline timezone: (e.g., UTC+4)</li>
+</ul>
+<h2>Prompt (paste into AI)</h2>
+<p>Role: you are an operations manager.<br>
+Task: convert the notes into an action plan. Do <strong>not</strong> invent facts. If something is unclear, add it as a question in the “Open questions” section.</p>
+<p>Output format (in this exact order):</p>
+<ol>
+<li><strong>Summary (5 bullets max)</strong></li>
+<li><strong>Decisions made</strong>
+<ul>
+<li>Decision → rationale (if stated) → impact</li>
+</ul>
+</li>
+<li><strong>Action plan table</strong>
+<ul>
+<li>Task | Owner | Due date | Priority (H/M/L) | Dependencies | Evidence/Link (if any)</li>
+</ul>
+</li>
+<li><strong>Risks &amp; blockers</strong>
+<ul>
+<li>Risk/blocker → why it matters → mitigation → owner</li>
+</ul>
+</li>
+<li><strong>Open questions (must be answered)</strong></li>
+<li><strong>Next meeting agenda (10–20 min)</strong></li>
+<li><strong>Follow-up message draft</strong> (short email/Slack message with tasks &amp; deadlines)</li>
+</ol>
+<p>Notes to follow:</p>
+<ul>
+<li>If due dates are not stated, write “TBD” and list it again in Open questions.</li>
+<li>If owners are not stated, write “Unassigned” and propose a role, not a person.</li>
+</ul>
+<h2>Quality check (fast)</h2>
+<ul>
+<li>Are all tasks actionable (verb + object)?</li>
+<li>Is every task assigned to an owner (or “Unassigned”)?</li>
+<li>Are deadlines present (or clearly marked TBD)?</li>
+<li>Do risks have a mitigation and an owner?</li>
+<li>No invented facts?</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

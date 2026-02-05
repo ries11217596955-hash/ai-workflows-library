@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI for writing · AI Workflows Library</title>
+  <meta name="description" content="Patterns and prompts for drafting, rewriting, and editing." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/en/pillars/ai-writing/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/pillars/ai-writing/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-writing/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/en/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/en/use-cases/"></a>
+        <a href="/en/tools/"></a>
+        <a href="/en/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/pillars/ai-writing/" class="active">EN</a>
+            
+              <a href="/ru/pillars/ai-writing/" class="">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>AI for writing</h1>
+<p>This page is a hub: practical patterns + copy-paste prompts.</p>
+<h2>What you will get</h2>
+<ul>
+<li>A simple workflow for drafting and editing.</li>
+<li>7 reusable patterns you can apply to emails, docs, and posts.</li>
+<li>Copy-paste prompts (minimal + pro).</li>
+</ul>
+<h2>The 5-step workflow (stable)</h2>
+<ol>
+<li>Define <strong>purpose</strong> and <strong>audience</strong>.</li>
+<li>Provide <strong>inputs</strong> (facts, links, constraints).</li>
+<li>Ask for a <strong>structure</strong> first (outline).</li>
+<li>Generate the draft.</li>
+<li>Run a <strong>quality pass</strong> (see: <a href="/en/tools/quality-checklist/">Quality checklist</a>).</li>
+</ol>
+<h2>Core patterns</h2>
+<h3>1) Outline first (then write)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Create an outline for: &lt;topic&gt;.
+Audience: &lt;who&gt;.
+Goal: &lt;what outcome&gt;.
+Constraints: &lt;length, tone, must-include points&gt;.
+Output: a numbered outline (H2/H3).
+</code></pre>
+<h3>2) Rewrite with constraints</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Rewrite the text below.
+Keep meaning. Improve clarity.
+Constraints: &lt;tone, length, level&gt;.
+Keep terms unchanged: &lt;term list&gt;.
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h3>3) Edit for correctness (fact guard)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Review the text for possible factual errors or ambiguous claims.
+Mark:
+- [CHECK] needs verification
+- [OK] likely correct
+Then propose safer rewrites that avoid unverified claims.
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h3>4) Style transfer (without changing meaning)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Rewrite in the style: &lt;formal / friendly / direct / technical&gt;.
+Do not change meaning or add new facts.
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h3>5) Summarize for decision</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Summarize this content for a decision maker.
+Output:
+1) 5 bullet summary
+2) Risks / unknowns
+3) Recommended next step (1)
+Text:
+&lt;PASTE&gt;
+</code></pre>
+<h3>6) Turn notes into a structured doc</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Turn these notes into a structured document.
+Format:
+- Title
+- Context
+- Key points
+- Open questions
+- Action list (Owner / Due / Status)
+Notes:
+&lt;PASTE&gt;
+</code></pre>
+<h3>7) Generate alternatives (A/B/C)</h3>
+<p><strong>Prompt</strong></p>
+<pre><code class="language-text">Create 3 variants of the same message:
+A) short and direct
+B) neutral and formal
+C) friendly and persuasive
+Constraints: &lt;max length, must include X&gt;.
+Draft idea:
+&lt;PASTE&gt;
+</code></pre>
+<h2>Starter packs (copy-paste)</h2>
+<h3>Minimal request</h3>
+<pre><code class="language-text">Task: &lt;one sentence&gt;.
+Audience: &lt;who&gt;.
+Constraints: &lt;tone/length/must-include&gt;.
+Output format: &lt;bullets / table / sections&gt;.
+</code></pre>
+<h3>Pro request (better control)</h3>
+<pre><code class="language-text">Task: &lt;task&gt;.
+Context: &lt;background&gt;.
+Inputs: &lt;facts/data you provide&gt;.
+Constraints: &lt;privacy, compliance, tone, length&gt;.
+Output:
+1) Draft
+2) Assumptions (if any)
+3) Quality checks performed
+</code></pre>
+<h2>Related use cases</h2>
+<ul>
+<li><a href="/en/use-cases/meeting-to-follow-up-email/">Meeting → Follow-up Email</a></li>
+<li><a href="/en/use-cases/meeting-to-action-plan/">Meeting → Action Plan</a></li>
+<li><a href="/en/use-cases/email/">Email assistant</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

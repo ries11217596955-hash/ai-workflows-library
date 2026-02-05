@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Контракт запроса · AI Workflows Library</title>
+  <meta name="description" content="Короткая структура запроса для стабильных результатов ИИ." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/tools/prompt-contract/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/tools/prompt-contract/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/tools/prompt-contract/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/"></a>
+        <a href="/ru/tools/"></a>
+        <a href="/ru/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/tools/prompt-contract/" class="">EN</a>
+            
+              <a href="/ru/tools/prompt-contract/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Контракт запроса</h1>
+<p>“Контракт” — это стабильная форма запроса. Она уменьшает дрейф и повышает повторяемость.</p>
+<h2>Контракт (копипаст)</h2>
+<pre><code class="language-text">Задача: &lt;что нужно получить&gt;.
+Контекст: &lt;зачем / фон&gt;.
+Входные данные: &lt;факты, которые ты даёшь&gt;.
+Ограничения: &lt;приватность, тон, объём, что обязательно&gt;.
+Формат ответа: &lt;разделы/таблица/список&gt;.
+Правила качества:
+- факты не выдумывать
+- неизвестное помечать [CHECK]
+- термины не менять: &lt;термины&gt;
+</code></pre>
+<h2>Минимальный vs расширенный</h2>
+<h3>Минимальный (быстро)</h3>
+<pre><code class="language-text">Задача: &lt;одно предложение&gt;.
+Ограничения: &lt;тон/объём&gt;.
+Формат: &lt;буллеты или таблица&gt;.
+</code></pre>
+<h3>Расширенный (контроль)</h3>
+<pre><code class="language-text">Задача:
+Контекст:
+Входные данные:
+Ограничения:
+Выход:
+1) Черновик
+2) Допущения (если есть)
+3) QA-прогон (проблемы + фиксы)
+</code></pre>
+<h2>Частые сбои (и как чинить)</h2>
+<ul>
+<li>Размытая задача → добавь “Формат ответа”.</li>
+<li>Выдуманные факты → добавь “факты не выдумывать”.</li>
+<li>Слишком длинно → добавь лимит по объёму.</li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ИИ для письма · AI Workflows Library</title>
+  <meta name="description" content="Паттерны и промпты для черновиков, переписывания и редактуры." />
+  <link rel="canonical" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-writing/" />
+
+  
+  
+    
+    
+      
+        <link rel="alternate" hreflang="en" href="https://YOUR-SITE.pages.dev/en/pillars/ai-writing/" />
+      
+        <link rel="alternate" hreflang="ru" href="https://YOUR-SITE.pages.dev/ru/pillars/ai-writing/" />
+      
+    
+  
+
+  <style>
+    :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
+    header { border-bottom: 1px solid var(--line); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+    .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
+    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    nav a:hover { text-decoration: underline; }
+    .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
+    .lang a.active { color: var(--fg); font-weight: 700; }
+    main { padding: 22px 16px 44px; }
+    h1 { font-size: 34px; margin: 0 0 8px; }
+    h2 { margin-top: 28px; }
+    p, li { line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 14px 0; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; }
+    .k { font-weight: 700; }
+    footer { border-top: 1px solid var(--line); }
+    code, pre { background: #f7f7f7; }
+    pre { padding: 12px; border-radius: 12px; overflow: auto; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div>
+      <a class="brand" href="/ru/">AI Workflows Library</a>
+      <span class="muted">·</span>
+      <span class="muted"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:14px;">
+      <nav>
+        <a href="/ru/use-cases/"></a>
+        <a href="/ru/tools/"></a>
+        <a href="/ru/templates/"></a>
+      </nav>
+
+      <div class="lang">
+        
+          
+          
+            
+              <a href="/en/pillars/ai-writing/" class="">EN</a>
+            
+              <a href="/ru/pillars/ai-writing/" class="active">RU</a>
+            
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>ИИ для письма</h1>
+<p>Это хаб: практичные паттерны + промпты “копипаст”.</p>
+<h2>Что ты получишь</h2>
+<ul>
+<li>Простой процесс написания и редактуры.</li>
+<li>7 переиспользуемых паттернов для писем, документов и постов.</li>
+<li>Промпты (минимальный + расширенный).</li>
+</ul>
+<h2>Процесс из 5 шагов (стабильный)</h2>
+<ol>
+<li>Определи <strong>цель</strong> и <strong>аудиторию</strong>.</li>
+<li>Дай <strong>входные данные</strong> (факты, ссылки, ограничения).</li>
+<li>Попроси сначала <strong>структуру</strong> (план).</li>
+<li>Сгенерируй черновик.</li>
+<li>Прогони <strong>проверку качества</strong> (см.: <a href="/ru/tools/quality-checklist/">Чек-лист качества</a>).</li>
+</ol>
+<h2>Основные паттерны</h2>
+<h3>1) Сначала план (потом текст)</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Составь план для: &lt;тема&gt;.
+Аудитория: &lt;кто&gt;.
+Цель: &lt;какой результат&gt;.
+Ограничения: &lt;объём, тон, что обязательно включить&gt;.
+Выход: нумерованный план (H2/H3).
+</code></pre>
+<h3>2) Переписать с ограничениями</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Перепиши текст ниже.
+Смысл сохранить, ясность улучшить.
+Ограничения: &lt;тон, объём, уровень&gt;.
+Термины не менять: &lt;список терминов&gt;.
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>3) Проверка корректности (факт-гард)</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Проверь текст на возможные фактические ошибки и неоднозначные утверждения.
+Пометь:
+- [CHECK] требует проверки
+- [OK] вероятно корректно
+Затем предложи более безопасные формулировки без непроверенных фактов.
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>4) Переписать в стиль (без добавления фактов)</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Перепиши в стиле: &lt;официально / дружелюбно / строго / технично&gt;.
+Смысл не менять, новые факты не добавлять.
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>5) Саммари для решения</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Сделай саммари для руководителя.
+Выход:
+1) 5 буллетов
+2) Риски / неизвестности
+3) Рекомендованный следующий шаг (1)
+Текст:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>6) Превратить заметки в документ</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Преврати заметки в структурированный документ.
+Формат:
+- Заголовок
+- Контекст
+- Ключевые пункты
+- Открытые вопросы
+- Список действий (Ответственный / Срок / Статус)
+Заметки:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h3>7) Варианты A/B/C</h3>
+<p><strong>Промпт</strong></p>
+<pre><code class="language-text">Сделай 3 варианта одного сообщения:
+A) коротко и прямо
+B) нейтрально и официально
+C) дружелюбно и убедительно
+Ограничения: &lt;объём, что обязательно включить&gt;.
+Черновик идеи:
+&lt;ВСТАВЬ&gt;
+</code></pre>
+<h2>Стартовые пакеты (копипаст)</h2>
+<h3>Минимальный запрос</h3>
+<pre><code class="language-text">Задача: &lt;одно предложение&gt;.
+Аудитория: &lt;кто&gt;.
+Ограничения: &lt;тон/объём/что обязательно&gt;.
+Формат ответа: &lt;буллеты / таблица / разделы&gt;.
+</code></pre>
+<h3>Расширенный запрос (лучше контроль)</h3>
+<pre><code class="language-text">Задача: &lt;задача&gt;.
+Контекст: &lt;фон&gt;.
+Входные данные: &lt;факты/цифры, которые ты даёшь&gt;.
+Ограничения: &lt;приватность, тон, объём&gt;.
+Выход:
+1) Черновик
+2) Допущения (если есть)
+3) Какие проверки качества сделаны
+</code></pre>
+<h2>Связанные use-cases</h2>
+<ul>
+<li><a href="/ru/use-cases/meeting-to-follow-up-email/">Встреча → follow-up письмо</a></li>
+<li><a href="/ru/use-cases/meeting-to-action-plan/">Встреча → план действий</a></li>
+<li><a href="/ru/use-cases/email/">Email-ассистент</a></li>
+</ul>
+
+</main>
+
+<footer>
+  <div class="wrap muted">
+    <div></div>
+    <div style="margin-top:6px; font-size: 13px;">
+      
+    </div>
+  </div>
+</footer>
+</body>
+</html>
