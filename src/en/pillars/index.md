@@ -18,3 +18,5 @@ footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
 - [AI for office work](/en/pillars/ai-office/)
 - [AI for learning](/en/pillars/ai-learning/)
 - [AI for automation basics](/en/pillars/ai-automation/)
+- [AI Writing](/en/pillars/ai-writing/) — Principles and workflows for consistent writing outputs.
+- [AI Office](/en/pillars/ai-office/) — Office-grade artefacts: docs, tables, slides, email.
