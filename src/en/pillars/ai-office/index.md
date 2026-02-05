@@ -1,38 +1,40 @@
 ---
-layout: base.njk
-title: "AI for office work"
-description: "Workflows for emails, reports, meeting notes, and tables."
-lang: en
-translationKey: pillar-ai-office
-siteTagline: "Practical AI use cases & templates"
-navUseCases: "Use cases"
-navTools: "Tools"
-navTemplates: "Templates"
-footerLine1: "This site provides workflow examples and templates. Always verify outputs before using them."
-footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
+title: AI Office
 ---
 
-# AI for office work
+A pillar for office-grade AI outputs: documents, tables, slides, and email — with a release mindset.
 
-Core rule: **AI drafts, you verify**.
+## Scope
+Covers: Word-like docs, spreadsheets, slide decks, meeting notes, action plans, and operational templates.
+Does not cover: client confidential processing without controls, or “automation that runs itself” without review.
 
-## Universal office prompt
-```text
-Role: operations assistant.
-Goal: produce <deliverable>.
-Inputs (facts): <bullet list>.
-Constraints: keep it concise, no invented data.
-Output: structured markdown with headings.
-Add a “Checks” section at the end: what should I verify?
-```
+## Typical outputs
+- Meeting notes → action plan
+- Checklists and SOP drafts
+- Tables: trackers, logs, registries
+- Slides: one-pagers, status, pitch outlines
+- Emails: follow-ups, summaries, requests
 
-## What works best
-- Turning messy notes into **a plan** (steps, owners, deadlines)
-- Creating **tables** (comparison, schedule, checklist)
-- Drafting **emails** with clear subject + CTA
+## Artefact standards (minimum)
+- **Clear title + purpose** in the first screen.
+- **Stable structure** (headings, consistent list style).
+- **Naming**: predictable paths and slugs (no spaces if your repo convention forbids them).
+- **Version/Status**: MVP / v0.x when applicable.
+- **No sensitive data** in public assets.
 
-## Next
-- [Turn notes into a plan](/en/use-cases/plan/)
-- [Business email](/en/use-cases/email/)
-- [Tool selector matrix](/en/tools/tool-selector-matrix/)
+## Risk & compliance
+- Remove personal data and confidential details before publishing.
+- If a template includes placeholders, keep them clearly generic.
+- Avoid “invented facts” — cite or label assumptions.
 
+## Tooling map
+- Writing & docs → see **AI Writing**
+- Quality gate → **Quality Checklist**
+- Use cases → `/en/use-cases/`
+
+## Quality gate
+Use: **[Quality Checklist](/en/tools/quality-checklist/)**
+
+## Related
+- Pillars index: `/en/pillars/`
+- Tools index: `/en/tools/`
