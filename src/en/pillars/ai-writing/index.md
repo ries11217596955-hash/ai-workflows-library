@@ -1,44 +1,52 @@
 ---
-layout: base.njk
-title: "AI for writing (reliable output)"
-description: "A simple framework for clear, accurate writing with AI."
-lang: en
-translationKey: pillar-ai-writing
-siteTagline: "Practical AI use cases & templates"
-navUseCases: "Use cases"
-navTools: "Tools"
-navTemplates: "Templates"
-footerLine1: "This site provides workflow examples and templates. Always verify outputs before using them."
-footerLine2: "Affiliate links (if any) will be disclosed on-page. © 2026"
+title: AI Writing
 ---
 
-# AI for writing (reliable output)
+A pillar for producing clear, consistent writing with AI — from briefs to publish-ready drafts.
 
-Use this when you need **clean text** (emails, docs, landing pages) without hallucinations and fluff.
+## Scope
+This pillar covers: briefs, outlines, drafts, rewrites, tone alignment, and structured documents.
+It does not cover: deep domain research without sources, or legal/medical advice.
 
-## The 4‑step method
-1) **Define the deliverable** (format, length, audience, tone).  
-2) **Provide inputs** (facts, constraints, examples).  
-3) **Force structure** (headings, bullets, tables).  
-4) **Run a quality pass** (checks below).
+## Principles
+- **Contract first**: define format, audience, constraints, and “done”.
+- **Structure beats style**: outline before drafting.
+- **Assumptions are labeled**: don’t hide missing info.
+- **One section = one purpose**: avoid mixed intent.
+- **Consistency matters**: terminology, tense, voice, formatting.
+- **Edit in passes**: content → structure → language → polish.
 
-## Copy‑paste “writer contract”
-```text
-You are my writing assistant.
-Task: <what to produce>.
-Audience: <who will read>.
-Tone: <neutral / friendly / strict>.
-Constraints: <must include / must not include>.
-Sources: If you’re unsure, say “UNKNOWN” instead of guessing.
-Output format: <markdown / email / checklist / table>.
-```
+## Standard workflows
+### 1) Brief → Outline → Draft
+1. Brief: goal, audience, constraints, key points, examples.
+2. Outline: headings + bullet intent per section.
+3. Draft: fill sections, keep scope.
+4. QA: run the checklist, fix gaps.
 
-## Quality checks
-- Are there any invented facts or numbers? If yes → remove or mark as UNKNOWN.
-- Is the structure readable (headings, bullets)?
-- Does it match the requested tone and length?
+### 2) Rewrite / Improve clarity
+1. Keep meaning (no semantic drift).
+2. Simplify structure (shorter sentences, cleaner paragraphs).
+3. Normalize terminology and tone.
+4. Final QA.
 
-## Next
-- [AI for office work](/en/pillars/ai-office/)
-- [Quality checklist](/en/tools/quality-checklist/)
+## Prompt patterns
+### A) Contract prompt (base)
+- Goal:
+- Audience:
+- Format:
+- Constraints:
+- Inputs (paste):
+- Output requirements (must include):
 
+### B) Outline-first prompt
+“Create an outline first. Wait for approval. Then write the draft using the approved outline.”
+
+### C) QA prompt
+“Check this output using the Quality Checklist. Report issues in bullets, then provide a corrected version.”
+
+## Quality gate
+Use: **[Quality Checklist](/en/tools/quality-checklist/)**
+
+## Related
+- Use cases index: `/en/use-cases/`
+- Pillars index: `/en/pillars/`
