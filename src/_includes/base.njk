@@ -17,17 +17,29 @@
     {% endif %}
   {% endif %}
 
+  {% set _pillarsLabel = navPillars or (lang == "ru" ? "Опоры" : "Pillars") %}
+
   <style>
     :root { --max: 900px; --fg: #111; --muted: #666; --bg: #fff; --line: #e6e6e6; }
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--fg); background: var(--bg); }
     header { border-bottom: 1px solid var(--line); }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 18px 16px; }
+
     .top { display:flex; gap:12px; align-items:center; justify-content: space-between; }
-    .brand { font-weight: 700; text-decoration: none; color: var(--fg); }
-    nav a { margin-right: 12px; text-decoration:none; color: var(--fg); }
+    .hdr-left { min-width: 0; display:flex; align-items:baseline; gap:8px; }
+    .brand { font-weight: 700; text-decoration: none; color: var(--fg); white-space: nowrap; }
+    .tagline { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 380px; }
+    .dot { color: var(--muted); flex: 0 0 auto; }
+
+    .hdr-right { display:flex; align-items:center; gap:14px; flex: 0 0 auto; }
+    nav { display:flex; gap:12px; flex-wrap: nowrap; }
+    nav a { text-decoration:none; color: var(--fg); white-space: nowrap; }
     nav a:hover { text-decoration: underline; }
+
+    .lang { white-space: nowrap; }
     .lang a { font-size: 14px; color: var(--muted); text-decoration:none; margin-left: 10px; }
     .lang a.active { color: var(--fg); font-weight: 700; }
+
     main { padding: 22px 16px 44px; }
     h1 { font-size: 34px; margin: 0 0 8px; }
     h2 { margin-top: 28px; }
@@ -39,23 +51,31 @@
     footer { border-top: 1px solid var(--line); }
     code, pre { background: #f7f7f7; }
     pre { padding: 12px; border-radius: 12px; overflow: auto; }
+
+    /* Safety: если всё же не влезет — аккуратный перенос блоком, без “кривых” одиночных пунктов */
+    @media (max-width: 860px) {
+      .top { flex-wrap: wrap; }
+      .hdr-right { width: 100%; justify-content: space-between; }
+      nav { flex-wrap: wrap; }
+      .tagline { max-width: 100%; }
+    }
   </style>
 </head>
 <body>
 <header>
   <div class="wrap top">
-    <div>
+    <div class="hdr-left">
       <a class="brand" href="/{{ lang }}/">{{ site.name }}</a>
-      <span class="muted">·</span>
-      <span class="muted">{{ siteTagline or "" }}</span>
+      <span class="dot">·</span>
+      <span class="tagline">{{ siteTagline }}</span>
     </div>
 
-    <div style="display:flex; align-items:center; gap:14px;">
+    <div class="hdr-right">
       <nav>
-        <a href="/{{ lang }}/use-cases/">{{ navUseCases or "Use cases" }}</a>
-        <a href="/{{ lang }}/pillars/">{{ navPillars or "Pillars" }}</a>
-        <a href="/{{ lang }}/tools/">{{ navTools or "Tools" }}</a>
-        <a href="/{{ lang }}/templates/">{{ navTemplates or "Templates" }}</a>
+        <a href="/{{ lang }}/use-cases/">{{ navUseCases }}</a>
+        <a href="/{{ lang }}/pillars/">{{ _pillarsLabel }}</a>
+        <a href="/{{ lang }}/tools/">{{ navTools }}</a>
+        <a href="/{{ lang }}/templates/">{{ navTemplates }}</a>
       </nav>
 
       <div class="lang">
