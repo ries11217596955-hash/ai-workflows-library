@@ -53,6 +53,10 @@
     <div style="display:flex; align-items:center; gap:14px;">
       <nav>
         <a href="/{{ lang }}/use-cases/">{{ navUseCases }}</a>
+
+        {# NEW: Pillars link #}
+        <a href="/{{ lang }}/pillars/">{% if lang == "ru" %}Столпы{% else %}Pillars{% endif %}</a>
+
         <a href="/{{ lang }}/tools/">{{ navTools }}</a>
         <a href="/{{ lang }}/templates/">{{ navTemplates }}</a>
       </nav>
