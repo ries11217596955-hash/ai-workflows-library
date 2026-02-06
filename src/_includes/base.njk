@@ -47,18 +47,15 @@
     <div>
       <a class="brand" href="/{{ lang }}/">{{ site.name }}</a>
       <span class="muted">·</span>
-      <span class="muted">{{ siteTagline }}</span>
+      <span class="muted">{{ siteTagline or "" }}</span>
     </div>
 
     <div style="display:flex; align-items:center; gap:14px;">
       <nav>
-        <a href="/{{ lang }}/use-cases/">{{ navUseCases }}</a>
-
-        {# NEW: Pillars link #}
-        <a href="/{{ lang }}/pillars/">{% if lang == "ru" %}Столпы{% else %}Pillars{% endif %}</a>
-
-        <a href="/{{ lang }}/tools/">{{ navTools }}</a>
-        <a href="/{{ lang }}/templates/">{{ navTemplates }}</a>
+        <a href="/{{ lang }}/use-cases/">{{ navUseCases or "Use cases" }}</a>
+        <a href="/{{ lang }}/pillars/">{{ navPillars or "Pillars" }}</a>
+        <a href="/{{ lang }}/tools/">{{ navTools or "Tools" }}</a>
+        <a href="/{{ lang }}/templates/">{{ navTemplates or "Templates" }}</a>
       </nav>
 
       <div class="lang">
