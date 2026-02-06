@@ -1,1 +1,10 @@
-﻿{"layout":"base.njk"}
+{
+  "layout": "base.njk",
+  "siteTagline": "Practical AI use cases & templates",
+  "navUseCases": "Use cases",
+  "navTools": "Tools",
+  "navTemplates": "Templates",
+  "footerLine1": "This site provides workflow examples and templates. Always verify AI output before use.",
+  "footerLine2": "Affiliate links (if any) will be disclosed on-page. © 2026"
+}
+
